@@ -15,19 +15,19 @@
   <link rel="icon" href="assets/appIcon.png">
 </head>
 <body>
-<div class="page">
+<div class="page" id="top">
 
   <!-- Navigation -->
   <header>
     <div class="container nav">
-      <div class="nav-left">
+      <a href="#top" class="nav-left">
         <div class="logo-pill">
           <div class="logo-pill-inner">
             <img src="assets/appIcon.png" alt="UniSports app icon" class="app-icon" width="28" height="28" />
           </div>
         </div>
         <div class="app-name">UniSports</div>
-      </div>
+      </a>
 
       <nav class="nav-links" aria-label="Primary navigation">
         <div class="nav-item nav-item-dropdown">
@@ -59,15 +59,17 @@
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-copy reveal">
-          <div class="chip">
-            <div class="chip-pill">★</div>
-            <span>Earn medals for drop-in sports at your university</span>
-          </div>
 
           <h1>
             Level up at your Ontario university with
             <span class="hero-gradient">UniSports</span>
           </h1>
+
+          <div class="hero-cta">
+            <a class="btn hero-secondary-cta" href="#universities">
+              See supported universities ↓
+            </a>
+          </div>
 
           <p class="hero-subtitle">
             Join drop-in sports and fitness sessions, earn medals as you play,
@@ -77,9 +79,17 @@
           <div class="hero-badges">
             <div class="store-badge">
               <a href="https://apps.apple.com/ca/app/unisports/id6670776453">
-                <img src="assets/appstore.png" alt="UniSports home screen" />
+                <img src="assets/appstore.png" alt="Download UniSports on the App Store" />
               </a>
-              
+            </div>
+
+            <!-- 5 gradient stars -->
+            <div class="hero-rating" aria-hidden="true">
+              <span class="hero-star">★</span>
+              <span class="hero-star">★</span>
+              <span class="hero-star">★</span>
+              <span class="hero-star">★</span>
+              <span class="hero-star">★</span>
             </div>
           </div>
 
