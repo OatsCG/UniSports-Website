@@ -986,10 +986,6 @@ footer span {
         grid-template-columns: minmax(0, 1fr);
     }
 
-    .hero-visual {
-        order: -1;
-    }
-
     .hero {
         padding-top: 3.2rem;
     }
@@ -998,9 +994,22 @@ footer span {
         grid-template-columns: minmax(0, 1fr);
     }
 
-    .feature-section-media {
+    /* On mobile, always show text first then image */
+    .hero-copy {
+        order: 1;
+    }
+
+    .hero-visual {
         order: -1;
-        margin-bottom: 1.5rem;
+    }
+
+    .feature-section-copy {
+        order: 1;
+    }
+
+    .feature-section-media {
+        order: 2;
+        margin-top: 1.5rem;
     }
 
     .uni-grid {
