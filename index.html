@@ -48,7 +48,12 @@
         </a>
       </div>
 
-      <button class="menu-toggle" aria-label="Open navigation">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
         ☰
       </button>
     </div>
@@ -389,6 +394,7 @@
 </div>
 
 <script>
+  // Scroll reveal
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -400,6 +406,34 @@
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile navigation toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const headerEl = document.querySelector('header');
+
+  if (menuToggle && headerEl) {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = headerEl.classList.toggle('nav-open');
+
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+      menuToggle.textContent = isOpen ? '✕' : '☰';
+    });
+
+    // Close nav when a link is clicked (on mobile)
+    const navInteractiveEls = document.querySelectorAll('.nav-links a, .nav-links button');
+
+    navInteractiveEls.forEach(el => {
+      el.addEventListener('click', () => {
+        if (headerEl.classList.contains('nav-open')) {
+          headerEl.classList.remove('nav-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.setAttribute('aria-label', 'Open navigation');
+          menuToggle.textContent = '☰';
+        }
+      });
+    });
+  }
 </script>
 </body>
 </html>
