@@ -696,6 +696,11 @@ section[id] {
   pointer-events: none;
 }
 
+.schoolBU {
+  border: 2px solid rgb(205, 0, 1);
+  box-shadow: 0 0 12px rgba(205, 0, 1, 0.55);
+}
+
 .schoolUTM {
   border: 2px solid rgb(0, 42, 92);
   box-shadow: 0 0 12px rgba(0, 42, 92, 0.55);
