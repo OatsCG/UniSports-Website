@@ -70,7 +70,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.9rem 0.25rem;
+    padding: 0.9rem 2rem;
 }
 
 .nav-left {
@@ -272,7 +272,7 @@ header {
 .hero-secondary-cta {
     font-size: 0.9rem;
     padding-inline: 1rem;
-    background: linear-gradient(135deg, #4f8df5, #2663d4);
+    background: linear-gradient(135deg, #252c39, #5f646e);
     color: #ffffff;
     border-color: transparent;
     box-shadow: 0 10px 24px rgba(38, 99, 212, 0.45);
@@ -295,13 +295,6 @@ header {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-}
-
-.hero-subtitle {
-    font-size: 1rem;
-    color: var(--muted);
-    max-width: 480px;
-    margin-bottom: 1.75rem;
 }
 
 .hero-badges {
